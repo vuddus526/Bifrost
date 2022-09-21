@@ -72,7 +72,7 @@
             <a class="navbar-item" href="/">
                 <img src="{{ url_for('static', filename='logo.png') }}">
                 <strong class="is-sparta"
-                        style="font-family: 'Stylish', sans-serif;font-size: larger;">SWEETER</strong>
+                        style="font-family: 'Stylish', sans-serif;font-size: larger;">Bifrǫst</strong>
             </a>
         </div>
     </nav>
@@ -178,21 +178,21 @@
     </section>
     {% if status %}
         <section class="section">
-        <article class="media">
-            <figure class="media-left" style="align-self: center">
-                <a class="image is-32x32" href="/user/{{ user_info.username }}">
-                    <img class="is-rounded" src="{{ url_for('static', filename=user_info.profile_pic_real) }}">
-                </a>
-            </figure>
-            <div class="media-content">
-                <div class="field">
-                    <p class="control">
-                        <input id="input-post" class="input is-rounded" placeholder="무슨 생각을 하고 계신가요?"
-                               onclick='$("#modal-post").addClass("is-active")'>
-                    </p>
-                </div>
-            </div>
-        </article>
+{#        <article class="media">#}
+{#            <figure class="media-left" style="align-self: center">#}
+{#                <a class="image is-32x32" href="/user/{{ user_info.username }}">#}
+{#                    <img class="is-rounded" src="{{ url_for('static', filename=user_info.profile_pic_real) }}">#}
+{#                </a>#}
+{#            </figure>#}
+{#            <div class="media-content">#}
+{#                <div class="field">#}
+{#                    <p class="control">#}
+{#                        <input id="input-post" class="input is-rounded" placeholder="무슨 생각을 하고 계신가요?"#}
+{#                               onclick='$("#modal-post").addClass("is-active")'>#}
+{#                    </p>#}
+{#                </div>#}
+{#            </div>#}
+{#        </article>#}
         <div class="modal" id="modal-post">
             <div class="modal-background" onclick='$("#modal-post").removeClass("is-active")'></div>
             <div class="modal-content">

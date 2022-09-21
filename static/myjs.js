@@ -38,14 +38,19 @@ function toggle_like(post_id, type) {
 
 function post() {
     let comment = $("#textarea-post").val()
+    let file = $('#pet-pic')[0].files[0]
     let today = new Date().toISOString()
+    let form_data = new FormData()
+    form_data.append("comment_give", comment)
+    form_data.append("file_give", file)
+    form_data.append("date_give", today)
     $.ajax({
         type: "POST",
         url: "/posting",
-        data: {
-            comment_give: comment,
-            date_give: today
-        },
+        data: form_data,
+        cache: false,
+        contentType: false,
+        processData: false,
         success: function (response) {
             $("#modal-post").removeClass("is-active")
             window.location.reload()
@@ -110,7 +115,10 @@ function get_posts(username) {
 
                     let count_heart = post['count_heart']
 
-                    let html_temp = `<div class="box" id="${post["_id"]}">
+                    let html_temp = `<figure class="image is-4by3">
+                                          <img src="/static/${post['img']}" alt="Placeholder image">
+                                        </figure>
+                                       <div class="box" id="${post["_id"]}">
                                         <article class="media">
                                             <div class="media-left">
                                                 <a class="image is-64x64" href="/user/${post['username']}">

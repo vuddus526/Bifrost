@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'Goyang';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Goyang.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    background-color: #A9BF9F;
+    min-height: 100vh;
+		padding-top: 52px;
+}
+.section {
+    padding: 16px 24px;
+    max-width: 46.875rem;
+    margin: auto;
+}
+.title {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'goyang', sans-serif;
+    font-weight: 800;
+    font-size: 80px;
+}
+.title-screen{
+    width: auto;
+    margin: .625rem auto;
+    border: 1px solid #000000;
+    position: relative;
+}
+.is-sparta {
+    color: #548C58 !important;
+}
+.button.is-sparta {
+    background-color: #548C58;
+    border-color: transparent;
+    color: #fff !important;
+}
+
+.button.is-sparta.is-outlined {
+    background-color: transparent;
+    border-color: #548C58;
+    color: #548C58 !important;
+}
+.help {
+    color: gray;
+}

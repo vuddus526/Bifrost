@@ -1,10 +1,8 @@
-$('.message a').click(function () {
-    $('form').animate({ height: "toggle", opacity: "toggle" }, "slow");
-});
 // {% if msg %}
 //     alert("{{ msg }}")
 // {% endif %}
 function sign_in() {
+
     let username = $("#input-username").val()
     let password = $("#input-password").val()
 
@@ -93,12 +91,14 @@ function sign_up() {
 
 }
 function toggle_sign_up() {
+    $("#help-id-login").text("")
+    $("#help-password-login").text("")
     $("#sign-up-box").toggleClass("is-hidden")
     $("#div-sign-in-or-up").toggleClass("is-hidden")
     $("#btn-check-dup").toggleClass("is-hidden")
-    $("#help-id").toggleClass("is-hidden")
-    $("#help-password").toggleClass("is-hidden")
-    $("#help-password2").toggleClass("is-hidden")
+    $("#help-id").toggleClass("is-hidden").text("아이디는 2-10자의 영문과 숫자와 일부 특수문자(._-)만 입력 가능합니다.").removeClass("is-danger")
+    $("#help-password").toggleClass("is-hidden").text("영문과 숫자 조합의 8-20자의 비밀번호를 설정해주세요. 특수문자(!@#$%^&*)도 사용 가능합니다.").removeClass("is-danger")
+    $("#help-password2").toggleClass("is-hidden").text("비밀번호를 다시 한 번 입력해주세요.").removeClass("is-danger")
 }
 
 function is_nickname(asValue) {

@@ -59,3 +59,9 @@ input::-webkit-calendar-picker-indicator {
     width:100%;
     height:100%;
 }
+.fa-heart-o{
+    color: #FF0000 !important;
+}
+.fa-heart{
+    color: #FF0000!important;
+}
